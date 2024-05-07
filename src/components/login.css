@@ -1,0 +1,64 @@
+body{
+    background: -webkit-linear-gradient( #f11c1c, #f2f0f5);
+    cursor:pointer;
+}
+
+.App {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  form {
+    width: 300px;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: rgba(249, 249, 249, 0.3);
+
+  }
+  
+  form label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  form input[type="text"],
+  form input[type="password"] {
+    width: 90%;
+    padding: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    text-align: center;
+  }
+  
+  form button[type="submit"] {
+    width: 60%;
+    padding: 10px;
+    background-color:#212027;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  form button[type="submit"]:hover {
+    background-color: #ff0909;
+  }
+
+  form a {
+    color: #212027;
+    text-decoration: none;
+    display: block;
+    margin-top: 10px;
+    text-align: center;
+    text-decoration: none;
+    font-family: cursive;
+  }
+  
+  form a:hover {
+    color: #ff0909;
+  }
+  
