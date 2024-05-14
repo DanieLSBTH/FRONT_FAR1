@@ -1,23 +1,23 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import {  Routes, Route, Link } from 'react-router-dom';
 import { FaHome, FaBox, FaUser, FaUserTie, FaTruck, FaFileInvoice, FaFileAlt, FaImage, FaShoppingCart } from 'react-icons/fa'; // Importa los iconos de React
 
-import ShowProducts from './components/ShowProducts';
-import ShowClients from './components/ShowClients';
-import ShowEmployees from './components/ShowEmployees';
-import './Menu.css';
+import ShowProducts from '../components/ShowProducts';
+import ShowClients from '../components/ShowClients';
+import ShowEmployees from '../components/ShowEmployees';
+import '../App.css';
 
-import logo from './logo.png';
+import logo from '../logo.png';
 
-import ShowProviders from './components/ShowProviders';
-import ShowInvoices from './components/ShowInvoice';
-import ShowInvoiceDetails from './components/ShowInvoiceDetails';
-import Show from './components/Show';
-import ShowdDetails from './components/ShowdDetails';
+import ShowProviders from '../components/ShowProviders';
+import ShowInvoices from '../components/ShowInvoice';
+import ShowInvoiceDetails from '../components/ShowInvoiceDetails';
+import Show from '../components/Show';
+import ShowdDetails from '../components/ShowdDetails';
 
-function App() {
+function Menu() {
   return (
-    <BrowserRouter>
+ 
       <div>
   
         <header className="navbar">
@@ -30,7 +30,6 @@ function App() {
         <nav className="navbar">
           <div className="navbar-container">
           <div className="navbar-links">
-            
   <Link to="/" className="nav-link"><FaHome /> Inicio</Link>
   <Link to="/productos" className="nav-link"><FaBox /> Productos</Link>
   <Link to="/clientes" className="nav-link"><FaUser /> Clientes</Link>
@@ -59,7 +58,7 @@ function App() {
          
         </Routes>
       </div>
-    </BrowserRouter>
+   
   );
 }
 
@@ -71,4 +70,5 @@ function Home() {
   );
 }
 
-export default App;
+
+export default Menu;

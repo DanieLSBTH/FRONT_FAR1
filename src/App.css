@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  min-height: 100vh;
+  padding: 20px;
 }
 
 .App-logo {
@@ -36,3 +38,67 @@
     transform: rotate(360deg);
   }
 }
+
+/* App.css */
+
+.navbar {
+   background-image: url('/src/fondo8.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  object-fit: cover;
+  height: 100%; /*Agregar esta línea */
+  width: 100%; /* Agregar esta línea */
+  background-color: hsla(0, 0%, 0%, 0.966);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}
+.logo-container {
+  display: flex;
+  align-items: center; /* Centra verticalmente */
+
+}
+.logo {
+  max-width: 100px; /* Ajusta el ancho máximo según sea necesario */
+  height: auto; /* Mantiene la proporción original de la imagen */
+
+}
+.nav-link {
+  color: #fff; /* Color de enlaces en el menú */
+  text-decoration: none; /* Elimina la subrayado de los enlaces */
+  margin-right: 20px; /* Espaciado entre enlaces */
+}
+
+/* Agrega estilos adicionales según tus preferencias */
+
+/* Estilos para el contenido de la página de productos */
+.page-content {
+  padding: 20px; /* Espaciado interior del contenido */
+  background-color: #f4f4f4; /* Color de fondo del contenido */
+  border-radius: 5px; /* Bordes redondeados */
+}
+
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.navbar-links {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-link {
+  margin-right: 20px;
+  text-decoration: none;
+  color: rgb(255, 254, 254);
+}
+
