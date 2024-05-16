@@ -17,6 +17,11 @@
   }
 }
 
+body{
+  cursor: pointer;
+}
+
+
 
 .login-outer-container {
   display: flex;
@@ -75,11 +80,15 @@
 .submit-btn {
   padding: 0.5rem 1rem;
   font-size: 1rem;
-  background-color: #f30000;
+  background-color:black;
   color: #fff;
   border: none;
   border-radius: 4px;
   cursor: pointer;
+}
+
+.submit-btn:hover{
+  background-color:red;
 }
 
 .forgot-links {
