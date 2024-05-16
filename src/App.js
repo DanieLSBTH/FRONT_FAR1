@@ -12,6 +12,8 @@ import ShowdDetails from './components/ShowdDetails';
 import LoginForm from './components/LoginForm';
 import './App.css';
 import logo from './logo.png';
+import axios from 'axios';
+import { FaSignOutAlt } from 'react-icons/fa';
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -20,8 +22,17 @@ function App() {
     setIsLoggedIn(true);
   };
 
-  const handleLogout = () => {
-    setIsLoggedIn(false);
+  const handleLogout = async () => {
+    try {
+      const response = await axios.post('http://localhost:8080/api/usuario/logout');
+      if (response.data.success) {
+        setIsLoggedIn(false);
+      } else {
+        console.error('Error al cerrar sesión:', response.data.message);
+      }
+    } catch (error) {
+      console.error('Error al cerrar sesión:', error);
+    }
   };
 
   return (
@@ -65,6 +76,10 @@ function App() {
                   <Link to="/showddetails" className="nav-link">
                     <FaShoppingCart /> compra
                   </Link>
+                  {/* Botón de cierre de sesión */}
+                  <button className="logout-btn" onClick={handleLogout}>
+                  <FaSignOutAlt className="logout-icon" /> Cerrar sesión
+                  </button>
                 </div>
                 <div className="logo-container">
                   <img src={logo} alt="Logo de la farmacia" className="logo" />
